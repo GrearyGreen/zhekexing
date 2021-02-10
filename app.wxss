@@ -1,0 +1,6 @@
+/**app.wxss**/
+/**后期的全局优化**/
+@import'/style/weui.wxss';
+.button-footer{
+  margin-bottom: 0rpx;
+}
