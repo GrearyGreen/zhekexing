@@ -52,14 +52,15 @@
 			<view class="tr" wx:key="property" wx:for="{{timeList}}" wx:for-index="idx" wx:for-item="timeRow">
 				<block wx:if="{{idx%2}}">
 					<view class="when2">{{timeRow["when"]}}</view>
-					<view 
-					 class="td2" hover-class="td22"
-					  bindtap="getMap"id="{{idx}}" data-timeRow="{{timeRow}}" >
-					{{timeRow["start"]}}-->{{timeRow["end"]}}
+						<view 
+						class="td2" hover-class="td22"
+						bindtap="getMap"id="{{idx}}" data-timeRow="{{timeRow}}" >
+						
+							{{timeRow["start"]}}-->{{timeRow["end"]}}
 						<view class="navigator-arrow"></view>
-
 					</view>
 				</block>
+
 				<block wx:else>
 					<view class="when1">{{timeRow["when"]}}</view>
 					<view bindtap="getMap"
@@ -68,7 +69,6 @@
 					{{timeRow["start"]}}-->{{timeRow["end"]}}
 					<view class="navigator-arrow"></view>
 					</view>
-
 				</block>
 			</view>
 		</view>
