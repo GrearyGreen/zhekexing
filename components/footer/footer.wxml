@@ -1,11 +1,13 @@
 <!--components/footer.wxml-->
-
-<view class="page" data-weui-theme="{{theme}}">
-<view class="weui-footer">
-			<view class="weui-footer__links">
+<!-- 文档末尾的数据 -->
+<!-- <view class="page" data-weui-theme="{{theme}}"> -->
+	<view class="weui-footer" style="padding-bottom: calc(16px + env(safe-area-inset-bottom));padding-top:10px;">
+			<!-- <view class="weui-footer__links">
 				<a class="weui-footer__link">deer_echo@foxmail.com</a>
 				<a class="weui-footer__link">deer-echo/l-autobus-de-ZUST</a>
-			</view>
-			<view class="weui-footer__text">Copyright &copy; 2020-2024 ZUST</view>
-		</view>
-</view>
+			</view> -->
+			<view class="weui-footer__text">{{email}}</view>
+			<view class="weui-footer__text">{{firm_name}}</view>
+			<view class="weui-footer__text">{{firm_shengming}}</view>
+	</view>
+<!-- </view> -->

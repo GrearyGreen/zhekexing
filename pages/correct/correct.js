@@ -15,25 +15,23 @@ Page({
   //records:[]
   },
 
- onLoad(){
-
-  wx.getLocation({
-    type:'gcj02',
-    success:(res)=> {
-      this.setData({
-        latitude:res.latitude,
-        longitude:res.longitude,
-       })
-     },
-     fail(res){
-       console.error(res);
-       
-     }
-   })
-   //每3秒踩点一次
-   setInterval(
-     this.getPoint,3000
-     )
+  onLoad(){
+    wx.getLocation({
+      type:'gcj02',
+      success:(res)=> {
+        this.setData({
+          latitude:res.latitude,
+          longitude:res.longitude,
+        })
+      },
+      fail(res){
+        console.error(res);
+      }
+    })
+    //每3秒踩点一次
+    setInterval(
+      this.getPoint,3000
+    )
   },
   getPoint(){
     wx.getLocation({
@@ -46,25 +44,23 @@ Page({
       },
       fail(res){
          console.error(res);
-         
-        }
-      })
-      
-      //获取当前位置并存储到polyline
-      this.data.points.push({
-        latitude:this.data.latitude,
-        longitude:this.data.longitude
-      })
-   // console.log(this.data.points)
-   this.setData({
-     polyline:[{
-       points: this.data.points,
-       color: "#0091ff",
-       width: 3,
+      }
+    })
+  
+    //获取当前位置并存储到polyline
+    this.data.points.push({
+      latitude:this.data.latitude,
+      longitude:this.data.longitude
+    })
+    // console.log(this.data.points)
+    this.setData({
+      polyline:[{
+        points: this.data.points,
+        color: "#0091ff",
+        width: 3,
       }],
       
     })
-    
   },
   addPosition(){
     //this.onLoad();
@@ -153,5 +149,4 @@ Page({
     
   }
 }*/
-  
 })

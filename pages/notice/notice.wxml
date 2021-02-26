@@ -5,7 +5,7 @@
   告示
   </view>
   
-  <view class="usage">
+  <view class="usage" style = "margin-left: 10%;">
   注：
   </view>
 
@@ -19,5 +19,6 @@
   </view>
   <view class="usage">
   </view>
-  <footer/>
 </view>
+
+<footer></footer>

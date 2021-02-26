@@ -105,13 +105,16 @@
   text-align: center;
   vertical-align: middle;
   margin-top: 10rpx;
-
+  padding-top: 10rpx;
 }
 .dialog-close{
   text-align: center;
   font-size: 80rpx;
   color:#888888;
   align-self: center;
+  margin: 0;
+  padding: 0;
+  margin-top: -7px;
 }
 
 
@@ -194,12 +197,12 @@
   transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
   position: absolute;
   top: 50%;
-  margin-top: -35rpx;
+  margin-top: -58rpx;
   right: 28rpx;
 }
 
 .td, .td1, .td2{
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .th, .td, .td1, .td2{

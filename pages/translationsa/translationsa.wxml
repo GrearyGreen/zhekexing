@@ -9,5 +9,6 @@
   <view class="usage"></view>
   <view class="text_align">具体交通咨询安排调整以学校官网为准</view>
   <view class="usage"></view>
-  <footer></footer>
 </view>
+
+<footer></footer>

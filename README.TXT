@@ -19,26 +19,49 @@ style
 static
 	image：包含所有的图片文件
 		修改：进行分类，图片优化
-	local.js：包含所有地理位置
-	pyname.js：包含所有的页面选择文字
+	local.js：包含所有地理位置,字典（包含经纬度）
+	pyname.js：包含所有的页面选择文字，都是修改的名称
 		修改：仅查看当前，当天的路径，将查询放到更多
-	timetable.js：包含所有时间表
+	timetable.js：包含所有时间表（时间，起点，终点，途径点，车辆）
 		修改：仅显示运行的班车
+		问题：包含星期八
 	util.js：显示当前时间，匹配当前数据
-page
-	in
-libs
-	amap-wx.js
-	bmap-wx.js
-	config.js
-	qqmap-wx-jssdk.js
-	qqmap-wx-jssdk.min.js
-components
+		推荐下一个班次的车辆
+		获取当前的日期
+page：所有的页面
+	login：登录；获取定位
+	index：主页面显示
+		map：地图导航页面
+			头部使用本次行程路线
+			地图：当前定位；路线显示
+			下一站：即将到达的站点
+				预计时间：分钟+秒
+				剩余座位
+			
+			correct：路线矫正
+	more：更多的页面
+		connect：联系我们
+		notice：告示
+		process:上车流程
+			文字显示页面
+			末尾的数据声明
+		translationsa:交通咨询
+		usage：未使用
+libs：可暂时忽略
+	amap-wx.js:地图接口的程序
+	bmap-wx.js：地图接口的程序
+	config.js：控制
+	qqmap-wx-jssdk.js：信息加密
+	qqmap-wx-jssdk.min.js：未知
+components：文档末尾的声明,自定义组件
+	声明组件一般使用文件名，也可自定义
+	自定义文件名，将"component-tag-name": "path/to/the/custom/component"复制到.json文件中
+	在app.json中配置后，全局使用
 	footer
 		footer.js
 		footer.json
 		footer.wxml
-		footer.wxss
+		footer.wxss：调用了weixinUI
 cloud|当前环境：lwt
 		修改 完善云服务的东西，包括免费试用的内容
 	getopenid

@@ -11,6 +11,7 @@ const formatTime = date => {
   var minute = date.getMinutes()
   return [hour, minute].map(formatNumber).join(':')
 }
+//
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -22,7 +23,6 @@ const formatDate = date => {
   const month = date.getMonth() + 1
   const day = date.getDate()
   return [year, month, day]
-
 }
 //todate默认参数是当前日期，可以传入对应时间 todate格式为2018-10-05
 function getDates(days, todate) {
@@ -33,6 +33,7 @@ function getDates(days, todate) {
   }
   return dateArry;
 }
+//
 function dateLater(dates, later) {
   let dateObj = {};
   let show_day = new Array('周日', '周一', '周二', '周三', '周四', '周五', '周六');
@@ -55,7 +56,6 @@ function compare(s1, s2) {
       return 0
     }
   }
-
   return 0
 }
 
@@ -68,22 +68,24 @@ function timePicker(date) {
   if (date == '周日')
     return 2;
 }
+//
 function update_next(timeList) {
   let time = formatTime(new Date());
   console.log("now:",time)
   let when = "今日无剩余";
-
+  //
   if (timeList == undefined) {
     return {
-      when: when
+      when:when
     }
   }
+  //
   if (!timeList.hasOwnProperty("length")) {
     return {
-     when:when
+      when:when
     }
   }
-
+  //
   for (let i = 0; i < timeList.length; i++) {
     if (compare(timeList[i]["when"], time)) {
       console.log("timelist:",timeList[i]["when"])
@@ -91,12 +93,13 @@ function update_next(timeList) {
       break;
     }
   }
-
+  //
   return {
    when:when
   }
 }
 
+//
 module.exports = {
   formatDate: formatDate,
   getDates: getDates,

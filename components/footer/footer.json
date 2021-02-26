@@ -1,4 +1,9 @@
 {
   "component": true,
+  "注释":"自定义标签",
+  "注释":"引用声明",
+  "注释":"引用的路径(若为空，则以文件名为标签名)",
+  "若要使用":"README.TXT的数据放入下面usingComponents的大括号内即可",
+  "注释":"component-tag-name，为文件名称，后面是路径",
   "usingComponents": {}
 }

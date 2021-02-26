@@ -1,3 +1,4 @@
+//
 function AMapWX(a) {
   this.key = a.key, this.requestConfig = {
     key: a.key,
@@ -8,6 +9,7 @@ function AMapWX(a) {
     logversion: "2.0"
   }
 }
+//
 AMapWX.prototype.getWxLocation = function (a, b) {
   wx.getLocation({
     type: "gcj02",
@@ -30,7 +32,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, AMapWX.prototype.getRegeo = function (a) {
+}, 
+//
+AMapWX.prototype.getRegeo = function (a) {
   function c(c) {
     var d = b.requestConfig;
     wx.request({
@@ -78,7 +82,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
   a.location ? c(a.location) : b.getWxLocation(a, function (a) {
     c(a)
   })
-}, AMapWX.prototype.getWeather = function (a) {
+},
+//
+AMapWX.prototype.getWeather = function (a) {
   function d(d) {
     var e = "base";
     a.type && "forecast" == a.type && (e = "all"), wx.request({
@@ -181,7 +187,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
   a.city ? d(a.city) : b.getWxLocation(a, function (a) {
     e(a)
   })
-}, AMapWX.prototype.getPoiAround = function (a) {
+},
+//
+AMapWX.prototype.getPoiAround = function (a) {
   function d(d) {
     var e = {
       key: b.key,
@@ -236,7 +244,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
   a.location ? d(a.location) : b.getWxLocation(a, function (a) {
     d(a)
   })
-}, AMapWX.prototype.getStaticmap = function (a) {
+},
+//
+AMapWX.prototype.getStaticmap = function (a) {
   function f(b) {
     c.push("location=" + b), a.zoom && c.push("zoom=" + a.zoom), a.size && c.push("size=" + a.size), a.scale && c.push("scale=" + a.scale), a.markers && c.push("markers=" + a.markers), a.labels && c.push("labels=" + a.labels), a.paths && c.push("paths=" + a.paths), a.traffic && c.push("traffic=" + a.traffic);
     var e = d + c.join("&");
@@ -250,7 +260,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
   c.push("key=" + b.key), e = b.requestConfig, c.push("s=" + e.s), c.push("platform=" + e.platform), c.push("appname=" + e.appname), c.push("sdkversion=" + e.sdkversion), c.push("logversion=" + e.logversion), a.location ? f(a.location) : b.getWxLocation(a, function (a) {
     f(a)
   })
-}, AMapWX.prototype.getInputtips = function (a) {
+},
+//
+AMapWX.prototype.getInputtips = function (a) {
   var b = this,
     c = b.requestConfig,
     d = {
@@ -280,7 +292,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, AMapWX.prototype.getDrivingRoute = function (a) {
+},
+//
+AMapWX.prototype.getDrivingRoute = function (a) {
   var b = this,
     c = b.requestConfig,
     d = {
@@ -311,7 +325,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, AMapWX.prototype.getWalkingRoute = function (a) {
+},
+//
+AMapWX.prototype.getWalkingRoute = function (a) {
   var b = this,
     c = b.requestConfig,
     d = {
@@ -341,7 +357,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, AMapWX.prototype.getTransitRoute = function (a) {
+},
+//
+AMapWX.prototype.getTransitRoute = function (a) {
   var b = this,
     c = b.requestConfig,
     d = {
@@ -376,7 +394,9 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, AMapWX.prototype.getRidingRoute = function (a) {
+},
+//
+AMapWX.prototype.getRidingRoute = function (a) {
   var b = this,
     c = b.requestConfig,
     d = {
@@ -406,4 +426,6 @@ AMapWX.prototype.getWxLocation = function (a, b) {
       })
     }
   })
-}, module.exports.AMapWX = AMapWX;
+},
+//
+module.exports.AMapWX = AMapWX;

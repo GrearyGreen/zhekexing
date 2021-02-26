@@ -21,9 +21,6 @@
 			<input type="number" name="contact" maxlength="11" placeholder-class="placeholder" placeholder="请输入您的手机号,方便我们及时给您回复" />
 			<button class="btn" formType="submit" bindtap="getData" hover-class="none">提交</button>
 	</form>
-    <!--页脚-->
-	<footer/>
-
-
-
 </view>
+
+<footer></footer>

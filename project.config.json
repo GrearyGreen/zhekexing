@@ -1,5 +1,6 @@
 {
     "description": "项目配置文件",
+    "注释":"云开发新增语句",
     "cloudfunctionRoot": "cloud/",
     "packOptions": {
         "ignore": []

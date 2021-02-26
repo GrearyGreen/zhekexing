@@ -6,14 +6,19 @@ const app = getApp()
 //get local data
 var timeTable = require("../../static/timetable.js").data;
 var pyName = require("../../static/pyname.js").data;
-
+// console.log(timeTable);
+// console.log(pyName);
+//制作三级联动（出发，时间，目的地）
 //util
 var util = require("../../static/util.js");
+// console.log(util);
 //build the page
 Page({
+  //基本数据
   data: {
     // userinfo
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    
     pickerDepart: "市区",
     pickerDestin: "小和山",
     week: "？",
@@ -29,7 +34,7 @@ Page({
     timeList: {},
     //routes:''
   },
-
+  //
   bindMultiPickerChange: function (e) {
     // console.log('picker发送选择改变，携带值为', e.detail.value)
 
@@ -62,6 +67,7 @@ Page({
 
     this.setData(data);
   },
+  //
   bindMultiPickerColumnChange: function (e) {
     // console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
     // data dic for update
@@ -73,6 +79,7 @@ Page({
     // update multiIndex
     data.multiIndex[e.detail.column] = e.detail.value;
 
+    //选择的三级联动
     switch (e.detail.column) {
       case 0:
         switch (data.multiIndex[0]) {
@@ -155,21 +162,27 @@ Page({
     // update data
     this.setData(data);
   },
-
+  //跳转下一个页面，传递路线和起点数据
   getMap(e) {
-   console.log(e)
-    var route = e.currentTarget.dataset.timerow["site"]
-    var starting=e.currentTarget.dataset.timerow["start"]
+    console.log(e);
+    console.log(e.currentTarget.dataset.timerow);
+    var route = e.currentTarget.dataset.timerow["site"];
+    var starting=e.currentTarget.dataset.timerow["start"];
+    var ending = e.currentTarget.dataset.timerow["end"];
+    var bus = e.currentTarget.dataset.timerow["car_num"];
     
    /* this.setData({
       routes:route
     })*/
    // console.log(starting)
+
+   //传入的参数current
     wx.navigateTo({
-      url: '../map/map?current=' + route +'&onstart='+starting
+      url: '../map/map?current=' + route +'&onstart='+starting +'&onend='+ending +'&car_num='+bus
     })
 
   },
+  //公告，定位，网络状态
   onLoad: function (e) {
     console.log(e.title)
     this.setData({ 
@@ -178,14 +191,13 @@ Page({
         { url: "url", title: "定位还在完善中.....，建议前往上车地点前" }, 
         { url: "url", title: "询问下老师！另外部分起始点为市区，即是小和" }, 
         { url: "url", title: "山校区门口，请广大师生在进行比对后再确认" }, 
-      {url:"url",title:"上车地点！"}] 
+        {url:"url",title:"上车地点！"}] 
     }) 
     wx.getLocation({
       type: 'gcj02',
       success:(res)=> {
           this.latitude=res.latitude
           this.longitude=res.longitude
-              
       }
     }) 
     wx.getNetworkType({

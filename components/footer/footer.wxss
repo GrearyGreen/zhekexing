@@ -1,2 +1,3 @@
 /* components/footer.wxss */
+/* 在class中连接到weiui.wxss调用内部的样式 */
 @import'/style/weui.wxss';
