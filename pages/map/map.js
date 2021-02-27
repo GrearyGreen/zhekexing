@@ -33,6 +33,7 @@ Page({
     bus:'',
     car_num:'',
     people:0,
+    mapheight:'450rpx',
   },
   //给参数赋值（options是传入的参数）
   onLoad:function(options){
@@ -169,6 +170,19 @@ Page({
         index++;
       }
     }, 1000*20)
+  },
+  shensuo: function (e) {
+    console.log(e);
+    if (this.data.mapheight == '1000rpx') {
+      this.setData({
+        mapheight:'450rpx',
+      })
+    }else if (this.data.mapheight == '450rpx') {
+      this.setData({
+        mapheight:'1000rpx',
+      })
+    }
+    
   },
 
  /* findway(){

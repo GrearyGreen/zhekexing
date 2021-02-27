@@ -65,11 +65,11 @@
 				<block wx:else>
 					<view class="when1">{{timeRow["when"]}}</view>
 					<view bindtap="getMap"
-						hover-class="td11"class="td1"
+						hover-class="td11" class="td1"
 						id="{{idx}}" data-timeRow="{{timeRow}}">
 						<view>{{timeRow["start"]}}-->{{timeRow["end"]}}</view>
 						<view>{{timeRow["car_num"]}}</view>
-					<view class="navigator-arrow"></view>
+						<view class="navigator-arrow"></view>
 					</view>
 				</block>
 			</view>
