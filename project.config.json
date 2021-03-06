@@ -1,6 +1,6 @@
 {
     "description": "项目配置文件",
-    "注释":"云开发新增语句",
+    "注释": "云开发新增语句",
     "cloudfunctionRoot": "cloud/",
     "packOptions": {
         "ignore": []
@@ -42,7 +42,7 @@
     "compileType": "miniprogram",
     "libVersion": "2.15.0",
     "appid": "wxc91f08d88963778f",
-    "projectname": "浙科行git",
+    "projectname": "%E6%B5%99%E7%A7%91%E8%A1%8Cgit",
     "debugOptions": {
         "hidedInDevtools": []
     },

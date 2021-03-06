@@ -18,6 +18,10 @@ style
 	weui.wxss是git上微信自己的UI，可以参考调用
 static
 	image：包含所有的图片文件
+		index：主页的图标
+			map:地图页图标
+		more:第二页图标
+		tabbar:下面标题的图标
 		修改：进行分类，图片优化
 	local.js：包含所有地理位置,字典（包含经纬度）
 	pyname.js：包含所有的页面选择文字，都是修改的名称

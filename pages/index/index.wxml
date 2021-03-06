@@ -1,7 +1,7 @@
 <!--index.wxml-->
 
 <view  class='view_notice_contain'>
-	<image src='../../static/image/sound.png' class='image_notice' mode="widthFix" style="width:40rpx;height:40rpx"></image>
+	<image src='../../static/image/index/sound.png' class='image_notice' mode="widthFix" style="width:40rpx;height:40rpx"></image>
 	<swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3000"> 
 	<block wx:for="{{msgList}}" wx:key="item"> 
 		<navigator url="/pages/more/more?title={{item.url}}" open-type="switchTab"> 
@@ -16,7 +16,7 @@
 <view class="container">
 	<!-- 个人界面 -->
 	<view class="special-topic">
-		<image style="width: 100%; height: 100%" src="/static/image/block.jpg"></image>
+		<image style="width: 100%; height: 100%" src="/static/image/index/block.jpg"></image>
 		<!--the date now-->
 		<view class="special-topic-content">
 			<!--get user information and show avatar&nickname-->
@@ -44,6 +44,7 @@
 		</view>
 		</picker>
 	</view>
+	
 	<!--table-->
 	<view class="table">
 		<view >

@@ -25,8 +25,9 @@
 <view class = "xaifangneirong">
     <!-- 是否隐藏的符号 -->
     <view class="yincangfuhao" bindtap="shensuo">
-        <view class="yincangbutton">dianji</view>
+        <view class="yincangbutton"></view>
     </view>
+
     <!-- 基本信息 -->
     <view class = "information">
         <view class="bus_leixing">
@@ -37,10 +38,15 @@
         </view>
     </view>
 
+<!-- <view class="pattern">可乘坐的人数为：{{people}}</view> -->
+
     <view class="bingpai">
-        <!-- <view class="pattern">可乘坐的人数为：{{people}}</view> -->
+        <!-- 插入隔层1 -->
+        <view class="geceng1"></view>
+
         <!-- 多少时间到达 -->
         <view class="shijianxinxi">
+            <!-- <image class='shijian_back' src="../../static/image/index/map/beijing2.jpg"></image> -->
             <view class="time_title">
                 预计到达时间：
             </view>
@@ -49,8 +55,10 @@
             </view>
         </view>
 
+        <!-- 插入隔层2 -->
+        <view class="geceng2"></view>
+
         <!-- 还剩几站 -->
-        <!--<button style="width:40vw" bind:tap="findStation" class="box3">查询上车地点</button>-->
         <view class="zhandianxinxi">
             <view class="zhan_title">
                 下一站：
@@ -59,12 +67,25 @@
                 {{stations[1]}}
             </view>
         </view>
+
+        <!-- 插入隔层3 -->
+        <view class="geceng3"></view>
+
     </view>
 
     <view class="station_picture">
         <view></view>
     </view>
 
+</view>
+
+<!--<button style="width:40vw" bind:tap="findStation" class="box3">查询上车地点</button>-->
+
+<!-- 刷新按钮 -->
+<view class="shuaxin">
+    <button class="shuaxinanniu">
+        <view class="shuaxin_text">刷新</view>
+    </button>
 </view>
 
 <!-- 如果出现错误，进行路线矫正 -->

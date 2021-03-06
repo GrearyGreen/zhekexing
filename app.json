@@ -25,14 +25,14 @@
         "这是一个注释":"后期可以增加多个窗口，每个窗口增加一些东西",
         "pagePath": "pages/index/index",
         "text": "时间表",
-        "iconPath": "/static/image/tabbarBus.jpg",
-        "selectedIconPath": "/static/image/tabbarBusActive.jpg"
+        "iconPath": "/static/image/tabbar/tabbarBus.jpg",
+        "selectedIconPath": "/static/image/tabbar/tabbarBusActive.jpg"
       },
       {
         "pagePath": "pages/more/more",
         "text": "更多",
-        "iconPath": "/static/image/tabbarMore.jpg",
-        "selectedIconPath": "/static/image/tabbarMoreActive.jpg"
+        "iconPath": "/static/image/tabbar/tabbarMore.jpg",
+        "selectedIconPath": "/static/image/tabbar/tabbarMoreActive.jpg"
       }
     ]
   },

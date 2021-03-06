@@ -89,17 +89,15 @@
   vertical-align: center;
   margin-bottom: 20rpx;
   font-size: large;
-  
-  
 }
+
 .picker{
   display: flex;
   flex-direction: row;
   text-align: center;
   height: 100rpx;
-
- 
 }
+
 .td-button {
   width: 100%;
   text-align: center;
@@ -107,6 +105,7 @@
   margin-top: 10rpx;
   padding-top: 10rpx;
 }
+
 .dialog-close{
   text-align: center;
   font-size: 80rpx;
